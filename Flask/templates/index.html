@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+
+    <title>Credit Card Approval Prediction</title>
+
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='album.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>SmartBridge</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Credit Card Approval Prediction </h1>
+                <p>
+                    <a href="{{ url_for('home') }}" class="btn btn-secondary my-2">Home</a>
+                    {# The form below is for the "Prediction" button. It submits to the /Prediction route. #}
+                    <form action="{{ url_for('prediction') }}" method="POST" style="display: inline;">
+                        <input type="submit" class="btn btn-primary my-2" value="Prediction">
+                    </form>
+                </p>
+
+                <h1 class="jumbotron-heading">About Project </h1>
+                <p class="lead text-muted">This Machine Learning Model is responsible for calculating credit card is
+                    going to approved or not based data like, type of Education, property, job profile, gender,
+                    credit score and repayment behaviour etc. It is taking these data and based on previous
+                    customers behaviour this model is analyzing the applicant is illegible for taking credit card or
+                    not.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>PREDICTING CREDIT CARD APPROVAL; SmartBridge!</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/holder.min.js') }}"></script>
+</body>
+
+</html>
